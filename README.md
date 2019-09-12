@@ -9,17 +9,17 @@ Command line storefront application
 # features
 
 Bamazon can be run either in customer mode or manager mode:
- - [bamazon_customer](#Customer Interface)
- - [bamazon_manager](#Manager Interface)
+ - [bamazon_customer](#Customer_Interface)
+ - [bamazon_manager](#Manager_Interface)
 
 
 # usage
-### Customer Interface
-Customers experience a simple, intuitive ordering interface that makes shopping easy, convenient and irreversable!  User inputs are validated and sanitized so nothing yucky can get into your database!  The following video show a customer making an order correctly, as well as some of the common mistakes the Bamazon will catch. 
+### Customer_Interface
+Customers experience a simple, intuitive ordering interface that makes shopping easy, convenient and irreversable!  User inputs are validated and sanitized so nothing yucky can get into your database!  The following video shows a customer making an order correctly, as well as some of the common mistakes that Bamazon will catch. 
 
 ![screenshot](./assets/images/customerUse.gif)
 
-### Manager Interface
+### Manager_Interface
 Manager use allows authorized users to easily check inventory, see what is running low and reorder quickly and simply.
 
 #### View Inventory
