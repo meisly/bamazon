@@ -1,6 +1,6 @@
 # bamazon-cli-app
 
-![screenshot](.assets/images/customerStart.png)
+![screenshot](./assets/images/customerStart.png)
 
 Command line storefront application 
 
@@ -16,26 +16,26 @@ Bamazon can be run either in customer mode or manager mode:
 # usage
 ### Customer Interface
 Customers experience a simple, intuitive ordering interface that makes shopping easy, convenient and hassle free!
-![screenshot](.assets/images/customerUse.gif)
+![screenshot](./assets/images/customerUse.gif)
 
 ### Manager Interface
 Manager use allows authorized users to easily check inventory, see what is running low and reorder quickly and simply.
 
 #### View Inventory
 
-![screenshot](.assets/images/managerView.gif)
+![screenshot](./assets/images/managerView.gif)
 
 #### View Low Inventory
 
-![screenshot](.assets/images/managerLowInventory.gif)
+![screenshot](./assets/images/managerLowInventory.gif)
 
 #### Reorder Products
 
-![screenshot](./images/managerUpdateInventory.gif)
+![screenshot](./assets/images/managerUpdateInventory.gif)
 
 #### Add New Product
 
-![screenshot](./images/managerAddProduct.gif)
+![screenshot](./assets/images/managerAddProduct.gif)
 
 # author
 Tierra Farris
