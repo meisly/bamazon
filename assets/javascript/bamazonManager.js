@@ -12,6 +12,20 @@ const conn = mysql.createConnection({
 
 conn.connect(function (err) {
     if (err) throw err;
+    console.log(`
+                                            Welcome to
+        ****************************************************************************************   
+        ▀█████████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████  ▄███████▄   ▄██████▄  ███▄▄▄▄   
+          ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███ ██▀     ▄██ ███    ███ ███▀▀▀██▄ 
+          ███    ███   ███    ███ ███   ███   ███   ███    ███       ▄███▀ ███    ███ ███   ███ 
+         ▄███▄▄▄██▀    ███    ███ ███   ███   ███   ███    ███  ▀█▀▄███▀▄▄ ███    ███ ███   ███ 
+        ▀▀███▀▀▀██▄  ▀███████████ ███   ███   ███ ▀███████████   ▄███▀   ▀ ███    ███ ███   ███ 
+          ███    ██▄   ███    ███ ███   ███   ███   ███    ███ ▄███▀       ███    ███ ███   ███ 
+          ███    ███   ███    ███ ███   ███   ███   ███    ███ ███▄     ▄█ ███    ███ ███   ███ 
+        ▄█████████▀    ███    █▀   ▀█   ███   █▀    ███    █▀   ▀████████▀  ▀██████▀   ▀█   █▀  
+        ****************************************************************************************
+                    The world's most popular command line storefront mockup
+`);
     queryUser();
 
 })
@@ -61,7 +75,7 @@ function viewProducts() {
         })
         console.table(formatted);
 
-        conn.end();
+        keepGoing();
     });
 }
 // * View Low Inventory
@@ -71,7 +85,7 @@ function viewLowInv() {
             console.log(err);
         }
         console.table(res);
-        conn.end();
+        keepGoing();
     });
 
 }
@@ -94,7 +108,7 @@ function addToInv() {
                     console.log(err);
                 }
                 console.log(response.affectedRows + " record(s) updated");
-                conn.end();
+                keepGoing();
             })
         });
     });
@@ -115,7 +129,7 @@ function addNewProd() {
         }, (err, response) => {
             if (err) throw err;
             console.log(response.affectedRows + " record(s) updated")
-            conn.end();
+            keepGoing();
         })
     })
 }
@@ -164,4 +178,18 @@ function reorderPrompt(itemIDs) {
         choices: [{ name: "5", value: 5 }, { name: "10", value: 10 }, { name: "50", value: 50 }, { name: "100", value: 100 }]
 
     }])
+}
+
+function keepGoing () {
+    inquire.prompt({
+        type: "confirm",
+        message: "Would you like to perform another task?",
+        name: "keepGoing",
+    }).then((answers)=>{
+        if(answers.keepGoing){
+            queryUser();
+        } else {
+            conn.end();
+        }
+    })
 }

@@ -12,7 +12,34 @@ const conn = mysql.createConnection({
 
 conn.connect(function (err) {
     if (err) throw err;
-    initiateStore();
+    console.log(`
+                                               Welcome to
+
+            ***************************************************************************************
+            ▀█████████▄     ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████  ▄███████▄   ▄██████▄  ███▄▄▄▄   
+              ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███ ██▀     ▄██ ███    ███ ███▀▀▀██▄ 
+              ███    ███   ███    ███ ███   ███   ███   ███    ███       ▄███▀ ███    ███ ███   ███ 
+             ▄███▄▄▄██▀    ███    ███ ███   ███   ███   ███    ███  ▀█▀▄███▀▄▄ ███    ███ ███   ███ 
+            ▀▀███▀▀▀██▄  ▀███████████ ███   ███   ███ ▀███████████   ▄███▀   ▀ ███    ███ ███   ███ 
+              ███    ██▄   ███    ███ ███   ███   ███   ███    ███ ▄███▀       ███    ███ ███   ███ 
+              ███    ███   ███    ███ ███   ███   ███   ███    ███ ███▄     ▄█ ███    ███ ███   ███ 
+            ▄█████████▀    ███    █▀   ▀█   ███   █▀    ███    █▀   ▀████████▀  ▀██████▀   ▀█   █▀  
+            ****************************************************************************************
+                            The world's most popular command line storefront mockup
+`);
+    inquire.prompt({
+        type: "confirm",
+        message: "Would you like to enter the store?",
+        name: "confirm"
+    }).then(answer=>{
+        if(answer.confirm){
+            initiateStore();
+        } else {
+            console.log("Come back another time!")
+            conn.end();
+        }
+    })
+
 
 })
 let available_choices = [];
