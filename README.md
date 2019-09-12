@@ -15,25 +15,29 @@ Bamazon can be run either in customer mode or manager mode:
 
 # usage
 ### Customer Interface
-Customers experience a simple, intuitive ordering interface that makes shopping easy, convenient and hassle free!
+Customers experience a simple, intuitive ordering interface that makes shopping easy, convenient and irreversable!  User inputs are validated and sanitized so nothing yucky can get into your database!  
 ![screenshot](./assets/images/customerUse.gif)
 
 ### Manager Interface
 Manager use allows authorized users to easily check inventory, see what is running low and reorder quickly and simply.
 
 #### View Inventory
+Inventory view offers an easy to read, tabular view of every product in the shop and the product details such as amount in inventory.  From here the use can choose to perform another task which will take them back to the main menu.
 
 ![screenshot](./assets/images/managerView.gif)
 
 #### View Low Inventory
+Low inventory view shows a table containing any product whose inventory amount is 5 or lower.  This makes knowing what to reorder super simple!
 
 ![screenshot](./assets/images/managerLowInventory.gif)
 
 #### Reorder Products
+The use can easily navigate from the low inventory screen to the ordering menu by choosing 'Add to Inventory' back at the main menu. 
 
 ![screenshot](./assets/images/managerUpdateInventory.gif)
 
 #### Add New Product
+A simple series of questions walks the user through the process of adding a new product to the inventory.  User inputs are validated and clean making it hakuna matata. 
 
 ![screenshot](./assets/images/managerAddProduct.gif)
 
